@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Francesco</title>
+		<link rel="stylesheet" href="css/styleFrancesco.css" >
+		<link rel="shortcut icon" href="Imgs/fravicon.ico">
+		<script src="js/funcs.js"></script>
+	</head>
+	<body onload="recalculate()">
+		<header>
+			<div class="wrap">
+				<a href="index.html"><img class="logoImg" src="Imgs/FrancescoHD.png" alt="Francesco Logo"></a>
+				<nav>
+					<a href="bond.html" class="current"><span>Bond</span></a>
+					<a href="about.html"><span>About</span></a>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<section>
+				<div class="wrap-section">
+					<h1>Bond YTM Calculator</h1>
+					<form name="bondCalc">
+						<table>	
+							<tbody>
+								<tr>
+									<td>Face Value ($)</td><td><input type="number" name="faceValue" value=100 onchange="recalculate()"></td>
+								</tr>
+								<tr>
+									<td>Coupon Rate (%)</td><td><input type="number" name="couponRate" value=2 onchange="recalculate()"></td>
+								</tr>
+								<tr>
+									<td>Time to Maturity (y)</td><td><input type="number" name="timeToMaturity" value=5 onchange="recalculate()"></td>
+								</tr>
+							</tbody>
+						</table>
+						<table>	
+							<tbody>
+								<tr>
+									<td class="result-label">Price ($)</td>
+									<td class="result-label">Yield to Maturity (%)</td>
+								</tr>
+								<tr>
+									<td><input type="number" name="price" value=90 onchange="recalculate()"></td>
+									<td><input type="number" name="ytm" onchange="recalculate('price')"></td>
+								</tr>
+							</tbody>
+						</table>
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="wrap">
+				Copyright &copy; 2018 Francesco Pasini<br>
+			</div>
+		</footer>	
+	</body>
+</html>
